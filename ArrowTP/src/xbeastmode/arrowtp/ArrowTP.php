@@ -106,14 +106,14 @@ class ArrowTP extends PluginBase{
      * @param Player $p
      */
     public function addArrowTpKit(Player $p){
-        $bow = Item::get(Item::BOW, 0, ArrowTP::getInstance()->getConfig()->get("bow_amount"));
-        $arrow = Item::get(Item::ARROW, 0, ArrowTP::getInstance()->getConfig()->get("arrow_amount"));
+        $bow = Item::get(Item::BOW, 0, $this->getConfig()->get("bow_amount"));
+        $arrow = Item::get(Item::ARROW, 0, $this->getConfig()->get("arrow_amount"));
         $p->getInventory()->addItem($bow, $arrow);
     }
     /**
      * @return string
      */
     public function getBowCustomName(){
-        return ArrowTP::getInstance()->getConfig()->get("bow_custom_name");
+        return $this->getConfig()->get("bow_custom_name");
     }
 }
