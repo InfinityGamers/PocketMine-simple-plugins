@@ -1,0 +1,14 @@
+main: xbeastmode\arrowtp\ArrowTP
+api: 1.13.0
+load: STARTUP
+name: ArrowTP
+version: 1.1
+author: xBeastMode
+
+permissions:
+  arrowtp.use:
+    default: op
+  arrowtp.kit:
+    default: op
+  arrowtp.customname:
+    default: op
