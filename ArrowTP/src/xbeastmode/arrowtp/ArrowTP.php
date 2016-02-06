@@ -39,7 +39,7 @@ class ArrowTP extends PluginBase{
         $shooter = $a->shootingEntity;
         if($shooter instanceof Player){
             $pos = new Position($a->x, $a->y, $a->z, $a->level);
-            $tpEvent = new PlayerArrowTpEvent(ArrowTP::getInstance(), $shooter, $a, $pos);
+            $tpEvent = new PlayerArrowTpEvent($this, $shooter, $a, $pos);
             ArrowTP::getInstance()->getServer()->getPluginManager()->callEvent($tpEvent);
             if($tpEvent->isCancelled()) return;
             $shooter->teleport($pos);
