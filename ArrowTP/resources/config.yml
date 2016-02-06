@@ -1,0 +1,15 @@
+---
+#ArrowTP config by xBeastMode
+#enabled usage of teleporting with arrow?
+enable_use: true
+#give kits to players with the permission 'arrowtp.kit'?
+enable_join_kit: true
+#amount of bows to give
+bow_amount: 1
+#amount of arrows to give
+arrow_amount: 64
+#allow custom name on bow to players with the permission 'arrowtp.customname'?
+enable_custom_name: true
+#custom name to give bow
+bow_custom_name: "ArrowTP bow"
+...
