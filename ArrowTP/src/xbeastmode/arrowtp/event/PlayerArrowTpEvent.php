@@ -7,13 +7,9 @@ use pocketmine\Player;
 use xbeastmode\arrowtp\ArrowTP;
 class PlayerArrowTpEvent extends ArrowTpEvent implements Cancellable{
     public static $handlerList = null;
-    /**
-     * @var Player
-     */
+    /** @var Player*/
     private $player;
-    /**
-     * @var Arrow
-     */
+    /** @var Arrow*/
     private $arrow;
     /** @var Position*/
     private $position;
