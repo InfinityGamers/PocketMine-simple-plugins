@@ -81,28 +81,6 @@ class ArrowTP extends PluginBase{
         return $a->shootingEntity;
     }
     /**
-     * @param Arrow $a
-     * @return bool|\pocketmine\entity\Entity
-     */
-    public function getArrowShooterPlayer(Arrow $a){
-        $shooter = $a->shootingEntity;
-        if($shooter instanceof Player){
-            return $shooter;
-        }
-        return false;
-    }
-    /**
-     * @param Arrow $a
-     * @return null|string
-     */
-    public function getArrowShooterPlayerName(Arrow $a){
-        $shooter = $a->shootingEntity;
-        if($shooter instanceof Player){
-            return $shooter->getName();
-        }
-        return null;
-    }
-    /**
      * @param Player $p
      */
     public function addArrowTpKit(Player $p){
