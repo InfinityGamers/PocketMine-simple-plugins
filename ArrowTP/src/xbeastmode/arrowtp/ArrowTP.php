@@ -71,7 +71,7 @@ class ArrowTP extends PluginBase{
                 return $bow;
             }
         }
-        return false;
+        return null;
     }
     /**
      * @param Arrow $a
