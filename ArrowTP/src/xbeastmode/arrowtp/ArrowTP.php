@@ -11,6 +11,8 @@ use xbeastmode\arrowtp\event\PlayerArrowTpEvent;
 class ArrowTP extends PluginBase{
     /** @var ArrowTP*/
     private static $api;
+    /** @var SimpleAuth */
+    private $simpleAuth;
     public function onLoad(){
         if(!self::$api instanceof ArrowTP){
             self::$api = $this;
@@ -18,7 +20,14 @@ class ArrowTP extends PluginBase{
     }
     public function onEnable(){
         $this->getServer()->getPluginManager()->registerEvents(new Listener(), $this);
+        $this->simpleAuth = $this->getServer()->getPluginManager()->getPlugin("SimpleAuth");
         $this->saveDefaultConfig();
+    }
+    /**
+     * @return SimpleAuth
+    */
+    public function simpleAuth(){
+        return $this->simpleAuth;
     }
     //___  ______ _____
     /// _ \ | ___ \_   _|
