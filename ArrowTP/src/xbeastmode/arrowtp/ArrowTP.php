@@ -21,6 +21,9 @@ class ArrowTP extends PluginBase{
     public function onEnable(){
         $this->getServer()->getPluginManager()->registerEvents(new Listener(), $this);
         $this->simpleAuth = $this->getServer()->getPluginManager()->getPlugin("SimpleAuth");
+        if($this->simpleAuth){
+            $this->getLogger()->info("Enabling support with SimpleAuth ".$this->simpleAuth->getDescription()->getVersion()."!");
+        }
         $this->saveDefaultConfig();
     }
     /**
