@@ -4,6 +4,9 @@
 enable_use: true
 #give kits to players with the permission 'arrowtp.kit'?
 enable_join_kit: true
+#put true if you want to disable when player is authenticating 
+#!!!NOTE: only works with SimpleAuth
+disable_tp_on_auth: true
 #amount of bows to give
 bow_amount: 1
 #amount of arrows to give
