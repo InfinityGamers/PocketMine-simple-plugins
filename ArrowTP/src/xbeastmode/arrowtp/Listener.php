@@ -4,6 +4,7 @@ use pocketmine\entity\Arrow;
 use pocketmine\event\entity\ProjectileHitEvent;
 use pocketmine\event\player\PlayerItemHeldEvent;
 use pocketmine\event\player\PlayerJoinEvent;
+use xbeastmode\arrowtp\event\PlayerArrowTpEvent;
 use pocketmine\item\Bow;
 use pocketmine\Player;
 class Listener implements \pocketmine\event\Listener{
@@ -38,6 +39,15 @@ class Listener implements \pocketmine\event\Listener{
             if($p->hasPermission("arrowtp.customname") and ArrowTP::getInstance()->getInstance()->getConfig()->get("enable_custom_name")){
                 $p->sendPopup(ArrowTP::getInstance()->getBowCustomName());
             }
+        }
+    }
+    /**
+     * @param PlayerArrowTpEvent $e
+     */
+    public function onTp(PlayerArrowTpEvent $e){
+        $p = $e->getPlayer();
+        if(!ArrowTP::getInstance()->simpleAuth()->isPlayerAuthenticated($p)){
+            $e->setCancelled();
         }
     }
 }
